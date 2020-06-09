@@ -112,7 +112,26 @@ def andrews_films_and_leads
   # List the film title and the leading actor for all of the films 'Julie
   # Andrews' played in.
   execute(<<-SQL)
-  
+  SELECT
+    title, actors.name
+  FROM
+    movies
+  JOIN
+    castings ON movies.id = castings.movie_id
+  JOIN
+    actors ON castings.actor_id = actors.id
+  WHERE
+    movies.id IN (SELECT
+          movies.id
+        FROM
+          movies
+        JOIN
+          castings ON movies.id = castings.movie_id
+        JOIN
+          actors ON castings.actor_id = actors.id
+        WHERE
+          actors.name = 'Julie Andrews' 
+    )  AND castings.ord = 1
   SQL
 end
 
@@ -120,6 +139,22 @@ def prolific_actors
   # Obtain a list in alphabetical order of actors who've had at least 15
   # starring roles.
   execute(<<-SQL)
+  SELECT 
+  actors.name 
+  FROM
+    movies
+  JOIN
+    castings ON movies.id = castings.movie_id
+  JOIN
+    actors ON castings.actor_id = actors.id
+  WHERE 
+    castings.ord = 1 
+  GROUP BY 
+    actors.name 
+  HAVING 
+    COUNT(actors.name) >= 15 
+  ORDER BY 
+    actors.name 
   SQL
 end
 
@@ -127,6 +162,20 @@ def films_by_cast_size
   # List the films released in the year 1978 ordered by the number of actors
   # in the cast (descending), then by title (ascending).
   execute(<<-SQL)
+  SELECT 
+  title, COUNT(actors.name)
+  FROM
+    movies
+  JOIN
+    castings ON movies.id = castings.movie_id
+  JOIN
+    actors ON castings.actor_id = actors.id
+  WHERE 
+    yr = 1978 
+  GROUP BY 
+    movies.title 
+  ORDER BY 
+    COUNT(actors.name) DESC, movies.title ASC
   SQL
 end
 
