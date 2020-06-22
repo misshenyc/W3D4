@@ -1,0 +1,12 @@
+<h1> Please Sign-up </h1>
+<form action="<%=users_url%>" method = 'POST'>
+    <input type = 'hidden', name = 'authenticity_token', value = '<%= form_authenticity_token%>'>
+
+    <label id = "username"> user name </label>
+    <input for = "username" type = 'text' name ='user[username]'>
+    <br>
+    <label id = "password"> password </label>
+    <input for = 'password' type = 'password' name = 'user[password]'>
+    <br>
+    <input type = 'submit' value ='Sign-up'>
+</form>
