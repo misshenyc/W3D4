@@ -1,0 +1,7 @@
+<h1>edit your brand</h1>
+<form action="<%=band_url(@band)%>">
+    <input type="hidden" name ='_method' value ='patch'>
+    <label for="brandname">name of your brand</label>
+    <input type="text" id='brandname' name='band[name]' value='<%=@band.name%>'>
+
+</form>
