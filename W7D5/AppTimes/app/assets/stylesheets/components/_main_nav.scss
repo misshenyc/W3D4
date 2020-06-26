@@ -1,0 +1,49 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px;
+    border-bottom: 1px solid #9b8391;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+    display: flex;
+    align-items: center;  
+}
+
+.left-nav > ul > li {
+    margin-left: 10px;
+    cursor: pointer; //added
+    font-family: sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 5px 7px; //changed this to be aligned with the padding in button
+    font-weight: bold; //added based on comparison with main_nav.jpg
+}
+
+.right-nav > ul > li {
+    font-family: sans-serif;
+    margin: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.right-nav > ul > li:last-of-type {
+    transition: background-color 1s;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+    background-color: $lightest-gray;
+}
+
+.left-nav span {
+    
+}
+
+
+.right-nav i {
+    font-size: 15px;
+    cursor: pointer; //added so that cursor will change when hover over
+}
