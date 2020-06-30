@@ -1,0 +1,18 @@
+<h1><%= @sub.title %></h1>
+
+<h2><%= @sub.description %></h2>
+
+
+<form action="<%= posts_url %>" method='post'>
+    <button>Make a new post</button>
+</form>
+
+<% @sub.posts.each do |post| %>
+    <li><%= post.title %></li>
+<% end %>
+
+
+<form action="<%= sub_url(@sub) %>" method='post'>
+    <input type="hidden" name='_method' value='patch'>
+    <button>edit</button>
+</form>
