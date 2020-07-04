@@ -46,23 +46,20 @@ Array.prototype.myMap = function (method) {
     return mapped;
 };
 
+arr =[1,2,3]
 
 function callBack(acc, el) {
     return acc *= el;
 };
 
 Array.prototype.myReduce = function (callBack, initialValue) {
-    
     let acc = initialValue;
-
     if (!initialValue){
         acc = this[0];
     }
-    
-    this.forEach(function(x){
-        acc = callBack(acc, x);
-    });
-    
+    this.forEach(x => acc = callBack(acc, x));
     return acc;
 };
+
+console.log(arr.myReduce(callBack,4))
 
