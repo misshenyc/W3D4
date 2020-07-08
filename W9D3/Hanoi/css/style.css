@@ -1,0 +1,62 @@
+html, body, figure, figcaption, ul, li, h1 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    text-align: inherit;
+}
+
+
+ul:nth-child(2){
+     margin: 0 20px;
+ }
+ul {
+    float: left;
+    width: 180px;
+    padding: 0 0 10px 0;
+    border-bottom: 10px solid black;
+    cursor: pointer;
+    list-style: none;
+}
+
+ul:hover{
+    border-bottom: 10px solid blue;
+}
+
+
+
+li {
+    width: 0px;
+    margin: 10px auto;
+    height: 50px;
+    background-color: gray;
+    border-radius: 25px;
+    display: list-item;
+}
+
+.disk-1 {
+    width: 60px;
+}
+.disk-2 {
+    width: 120px;
+}
+.disk-3 {
+    width: 180px;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hanoi {
+    margin: 30px auto;
+    width: 600px;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 30px;
+    align-items: center;
+}
