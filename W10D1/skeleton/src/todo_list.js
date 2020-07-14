@@ -14,14 +14,15 @@ const addTodo = (e) => {
     };
     todos.push(todo);
     todosForm.reset();
-    populateList(todo);
-    debugger
+    // debugger;
+    populateList(todos);
     localStorage.setItem("todos", JSON.stringify(todos))
 
 }
 
 const populateList = (todos) => {
-    todosList.innerhtml = todos.forEach(todo => {
+    todosList.innerHTML = "";
+    todos.forEach(todo => {
         const label = document.createElement("label");
         label.textContent = todo.name;
         const checkbox = document.createElement("input");

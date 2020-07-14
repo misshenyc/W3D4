@@ -1,0 +1,57 @@
+div {
+    margin: 0 auto;
+    width: 500px;
+}
+
+h1 {
+    font-family: 'Fira Code';
+    font-size: 50px;
+    padding: 10px 10px 10px 10px;
+}
+
+h2{
+    font-family: 'Fira Code';
+    font-size: 30px;
+}
+
+.clock {
+    background-color: aqua;
+    height: 200px;
+}
+
+.tabs {
+    background-color: aqua;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    /* width: 500px; */
+    justify-content: space-between;
+}
+
+h3 {
+    border: solid 1px #ccc; 
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-family: 'Fira Code';
+    font-size: 30px;
+    width: 167px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: aqua;
+    font-family: 'Fira Code';
+    font-size: 20px;
+    border: solid 1px #ccc; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
