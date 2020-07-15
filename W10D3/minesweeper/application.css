@@ -1,0 +1,27 @@
+body {
+    margin: 0 auto;
+}
+
+.tile {
+    border: solid 1px #ccc;
+    width: 30px;
+    height: 30px;
+
+}
+
+p {
+    height: 20px;
+    width: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+
+.gamename {
+    color: maroon;
+    font-size: 50px;
+    padding: 50px;
+    margin: 0 auto;
+}

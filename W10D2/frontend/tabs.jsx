@@ -14,9 +14,11 @@ class Tabs extends React.Component {
   }
 
   render() {
-
+    
     const title = this.props.tabs.map((tab, idx) => {
-      return ( <h3 key = {idx} onClick ={()=> this.changeTab(idx)}> {tab.title} </h3> )
+      const selected = this.state.selectedTab
+      const klass = idx === selected? "active" : ""
+      return ( <h3 key = {idx} className = {klass} onClick ={()=> { this.changeTab(idx)}}> {tab.title} </h3> )
     })
 
     const selectedTab = this.props.tabs[this.state.selectedTab];

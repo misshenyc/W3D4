@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const tabs = [
-  {title: "One", content: "I am the first."},
-  {title: "Two", content: "Second pane here."},
-  {title: "Three", content: "Third pane here."}
+  {title: "Food Menu", content: "Lobster."},
+  {title: "Drink Menu", content: "Procesco."},
+  {title: "Dessert Menu", content: "Watermelon IceCream."}
 ] 

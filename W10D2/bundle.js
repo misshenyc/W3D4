@@ -248,17 +248,15 @@ var Tabs = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       var title = this.props.tabs.map(function (tab, idx) {
+        var selected = _this2.state.selectedTab;
+        var klass = idx === selected ? "active" : "";
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
           key: idx,
+          className: klass,
           onClick: function onClick() {
-            return _this2.changeTab(idx);
+            _this2.changeTab(idx);
           }
         }, " ", tab.title, " ");
-      });
-      var content = this.props.tabs.map(function (tab, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("article", {
-          key: idx
-        }, " ", tab.content, " ");
       });
       var selectedTab = this.props.tabs[this.state.selectedTab];
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " Tab "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -313,14 +311,14 @@ document.addEventListener("DOMContentLoaded", function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Root, null), root); // ReactDOM.render(<Tabs />, root);
 });
 var tabs = [{
-  title: "One",
-  content: "I am the first."
+  title: "Food Menu",
+  content: "Lobster."
 }, {
-  title: "Two",
-  content: "Second pane here."
+  title: "Drink Menu",
+  content: "Procesco."
 }, {
-  title: "Three",
-  content: "Third pane here."
+  title: "Dessert Menu",
+  content: "Watermelon IceCream."
 }];
 
 /***/ }),
