@@ -1,12 +1,16 @@
 import React from "react";
 import { render } from "react-dom";
+import TodoContainer from './todos/todo_list_container';
+import TodoForm from './todos/todo_form'
 
 
 const App = () => {
-    // const h1 = React.createElement('h1', null, 'Todos App');
-    // render() {
-        return (<h1>Todos App</h1>)
-    // };
+    return (
+    <div>
+        <TodoContainer />
+        <TodoForm />
+    </div>
+    );
 };
 
 export default App;
